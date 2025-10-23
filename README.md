@@ -1,23 +1,4 @@
-# Job Application Tracker & Discovery — Next.js, TypeScript, Prisma, PostgreSQL, Job Postings Catalog (+ FastAPI AI Pipeline) FullStack Project
-
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Next.js](https://img.shields.io/badge/Next.js-16-black)](https://nextjs.org/)
-[![React](https://img.shields.io/badge/React-19.1-blue)](https://react.dev/)
-[![TypeScript](https://img.shields.io/badge/TypeScript-5.8-blue)](https://www.typescriptlang.org/)
-[![Prisma](https://img.shields.io/badge/Prisma-6.19-2D3748)](https://www.prisma.io/)
-[![TanStack Query](https://img.shields.io/badge/TanStack_Query-5.90-FF4154)](https://tanstack.com/query)
-[![NextAuth](https://img.shields.io/badge/NextAuth-v5-purple)](https://authjs.dev/)
-[![PostgreSQL](https://img.shields.io/badge/PostgreSQL-Database-336791)](https://www.postgresql.org/)
-[![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.4-38B2AC)](https://tailwindcss.com/)
-[![Vitest](https://img.shields.io/badge/Vitest-4.1-6E9F18)](https://vitest.dev/)
-[![FastAPI](https://img.shields.io/badge/FastAPI-Phase_2-009688)](https://fastapi.tiangolo.com/)
-
-A production-style, full-stack **job application CRM** — not a generic job board. It helps you track applications you have already submitted, link them to postings in the app's own Postgres job postings catalog (salary, status, workplace and lifecycle changes), discover new roles to track, visualize your search with charts and KPIs, and (Phase 2) run an AI insights pipeline. Built for learning: App Router SSR, Server Actions, TanStack Query hydration, optimistic UI, multi-layer caching, SSE cross-tab sync, and strict TypeScript end-to-end.
-
-- **Live-Demo:** [https://jobify-tracker.vercel.app/](https://jobify-tracker.vercel.app/)
-
-![Screenshot 2025-07-01 at 15 31 44](https://github.com/user-attachments/assets/48f21eef-d40c-4e44-a585-a6b3f2417ebf) ![Screenshot 2025-07-01 at 14 33 39](https://github.com/user-attachments/assets/29e151c8-2deb-4dcd-8856-febb4c043abf) ![Screenshot 2025-07-01 at 14 48 55](https://github.com/user-attachments/assets/bf1eb91e-3b92-40a8-b78f-83ac1157919f) ![Screenshot 2025-07-01 at 14 51 02](https://github.com/user-attachments/assets/e41cb629-a0f8-4301-b926-969bf3d78cc3)
-
+# Tracker & Discovery
 ## Table of Contents
 
 - [Overview](#overview)
@@ -956,19 +937,3 @@ Jobify demonstrates how a modern full-stack application combines **secure authen
 - Teach full-stack concepts with real, runnable code
 
 Explore `docs/PROJECT_WALKTHROUGH.md` for a shorter technical reference, `docs/PROJECT_PLAN.md` for the Phase 2 AI roadmap, and `docs/JOBIFY_TECH_STACK_ANALYSIS.md` for stack deep-dives.
-
----
-
-## License
-
-This project is licensed under the [MIT License](https://opensource.org/licenses/MIT). Feel free to use, modify, and distribute the code as per the terms of the license.
-
-## Happy Coding! 🎉
-
-This is an **open-source project** - feel free to use, enhance, and extend this project further!
-
-If you have any questions or want to share your work, reach out via GitHub or my portfolio at [https://www.arnobmahmud.com](https://www.arnobmahmud.com).
-
-**Enjoy building and learning!** 🚀
-
-Thank you! 😊
