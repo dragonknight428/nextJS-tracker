@@ -10,7 +10,7 @@
 ## Resume INT-0003 (active — every session)
 
 1. READ `.agile-v/STATE.md` + `CLAUDE.md` + `PLAYBOOK.md` + `BACKLOG.md`
-2. Git: clean HEAD `148a49f` · branch `main`
+2. Git: `main` @ `38c39f4` (pushed; Vercel Production + Coolify AI apps on this commit)
 3. Verify: `npm run lint && npm run typecheck && npm run test && npm run build` (60 tests)
 4. MAP tasks → REQ-XXXX · SCOPE-V · log TRACE + DECISION
 5. **Current focus:** await user instruction (Gate 1 / E2E / n8n / Hetzner / feature)

@@ -7,9 +7,9 @@
 | **Status** | `ACTIVE` — Infinity Loop **ON** · awaiting user items for BL-0016 |
 | **Checkpoint** | INT-0004 `c1-bl0016-intake-20261014` (Human-Decision, PENDING) |
 | **Auth** | NextAuth v5 · `proxy.ts` (Next.js 16) |
-| **Last Updated** | 2026-10-15 |
-| **Git HEAD** | `main` — ISSUE-0011/0012 commit + A-Z verification commit on top of `2c8d08b` · **not pushed** |
-| **Verify** | EVAL-0031 (2026-10-15, Node 24): lint ✓ · typecheck ✓ · vitest **107/107** ✓ · pytest **26/26** ✓ · build ✓ · Playwright **31/31** ✓ · browser A-Z ✓ · security review ✓ |
+| **Last Updated** | 2026-10-22 |
+| **Git HEAD** | `38c39f4` on `main` · pushed · even with `origin/main` |
+| **Verify** | EVAL-0031 (2026-10-15, Node 24) still the last full local gate. 2026-10-22 deploy: Vercel Production Ready on `38c39f4` · Coolify `jobify-ai-backend` + `jobify-arq-worker` rebuilt on the same commit · `jobify-redis` left running |
 
 ## Reconcile (2026-10-15)
 - HEAD `4e08fda` matches recorded work; working tree clean (earlier "parallel edits" notes below are historical — all committed)
@@ -46,8 +46,9 @@
 - Playwright: `tests/e2e/auth.setup.ts` (storageState → `tests/e2e/.auth/`, gitignored) + `tests/e2e/fixtures.ts` (auto console/network assertions); `discover.spec.ts` rewritten
 - **Human-Action (postings):** remove `BLUEDOOR_WEBHOOK_SECRET` from Vercel · confirm `CRON_SECRET` set in Vercel (crons now reject without it) · Coolify redeploy `ai-service` + `arq-worker` (new field names; old names still accepted) · anyone signed in before the reset must sign in again
 - **A-Z verification DONE** (EVAL-0031): `pyrightconfig.json` + `.pylintrc` (editor red lines; local venv `python-ai-service/.venv`, gitignored) · Gemini chain starts at `3.5-flash-lite` · Playwright `tests/e2e/routes.spec.ts` + rewritten auth/dashboard/discover/stats/profile specs (CRUD writes only `E2E-<timestamp>` rows and deletes them) · fixes: `components/ui/glass-filter-dropdown.tsx` + `components/FormComponents.tsx` (label → trigger), `hooks/useJobsMutation.ts` (`requireJob`), `utils/actions.ts` (parsed-only update/team-create + error logs), `utils/db.ts` (`connect_timeout`), `instrumentation-client.ts` (session lifecycle `page`), `components/discover/discover-job-card.tsx` (action row wraps)
-- **Human-Action (AI):** Hugging Face returns 402 on every model — credits exhausted; top up or leave HF as last-resort
-- **Next exact action:** user pushes `main` when ready, then the Human-Actions above (Vercel env, Coolify redeploy); BL-0016 intake continues with the next user item
+- **Deployed 2026-10-22 (Human-Action, done):** `main` pushed. Coolify: unused exited `redis-database-asc44…` removed; `jobify-redis` + `jobify-ai-backend` + `jobify-arq-worker` all kept. `GEMINI_API_KEY` + `HF_TOKEN` added on both apps (Literal + Runtime on). Both apps redeployed on `38c39f4` (API uvicorn :3000; worker `run_pipeline_task` connected to Redis 7.2.14). Vercel: `BLUEDOOR_WEBHOOK_SECRET` deleted; Production redeploy Ready. Required Vercel names were present (`UPSTASH_REDIS_URL`/`TOKEN` aliases are valid). LLM keys stay on Coolify only.
+- **Still open:** Hugging Face 402 until credits are added (chain still works via Groq → Gemini → OpenRouter). Confirm by eye only: `AI_SERVICE_URL=https://ai.arnobmahmud.com`, `NEXT_PUBLIC_APP_URL=https://jobify-tracker.vercel.app`. Anyone signed in before the 2026-10-15 DB reset must sign in again.
+- **Next exact action:** BL-0016 ISSUE-0014 — user walks each page (workflow, CRUD, loading shells, features, then UI polish). Analyze → scoped plan → **wait for approval** before any code. No new ISSUE until the user names the first page.
 
 ## Recent (sync 2026-07-24)
 - Infinity Loop reactivated @ `148a49f` — full `.agile-v/` sync

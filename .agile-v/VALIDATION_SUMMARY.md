@@ -4,8 +4,8 @@
 |---|---|
 | Cycle | C1 |
 | Stage | 3 Synthesis — P1+P2+P3 ✅ · BL-0009…0015 ✅ · Gate 1 PENDING |
-| Status | `ACTIVE` — EVAL-0031 PASS (own postings catalog + A-Z verification) |
-| Last Updated | 2026-10-15 |
+| Status | `ACTIVE` — EVAL-0031 PASS · `38c39f4` deployed 2026-10-22 (Vercel Production + Coolify AI). Next gate: ISSUE-0014 page review, no code until approval |
+| Last Updated | 2026-10-22 |
 | Red Team | EVAL-0016…0019 PASS · EVAL-0020 governance sync |
 | EvalGate (Gate 2) | NOT_RUN |
 

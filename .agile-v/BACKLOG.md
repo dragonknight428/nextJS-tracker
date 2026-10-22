@@ -137,8 +137,8 @@
 | ISSUE-0010 | EVAL-0028 finding + user | Instant navigation on all dashboard routes: mirrored `loading.tsx` (same page view, cache-only `RouteFallbackProvider`), intent prefetch + pending spinner in nav/profile dropdown, `staleTimes.dynamic=30`, cached salary intel (Redis + stats tag), deduped stats/facets queries | REQ-0012, REQ-0014 | DONE (EVAL-0029) |
 | ISSUE-0011 | user (2026-10-14) | Replace third-party Bluedoor API (upstream gone) with our own Postgres postings catalog (`Company` / `JobPosting` / `JobPostingEvent`), read API `/api/postings*`, link + nightly resync, missing FKs; Bluedoor code/columns removed | REQ-0025, REQ-0026 | DONE (2026-10-15) |
 | ISSUE-0012 | user (2026-10-14) | Deterministic seed: 15 companies, 50 postings + events, demo account (test@user.com) with 25 jobs (12 linked) + profile; `db:reset`; shared DB wiped + reseeded with consent | REQ-0012 | DONE (2026-10-15) |
-| ISSUE-0013 | user (2026-10-14/15) | Free-tier LLM fallback chain per `docs/LLM_MODEL_SELECTION.md` + AI pipeline wiring fixes + single `.env.local` | REQ-0027 | DONE (EVAL-0030) — Human-Action: add GEMINI/HF keys; Coolify env + redeploy |
-| ISSUE-0014 | user (2026-10-14) | Feature-by-feature test pass; user will list non-working features, UI polish and API fixes; prod navigation feedback pending | — | TODO (details from user) |
+| ISSUE-0013 | user (2026-10-14/15) | Free-tier LLM fallback chain per `docs/LLM_MODEL_SELECTION.md` + AI pipeline wiring fixes + single `.env.local` | REQ-0027 | DONE (EVAL-0030) — Coolify keys + redeploy done 2026-10-22; HF credits still 402 |
+| ISSUE-0014 | user (2026-10-22) | Page-by-page review after `38c39f4` deploy: workflow, CRUD, loading shells, each feature, then UI polish. One page at a time; plan approval before code | REQ-0012, REQ-0014 | NEXT — waiting for the user to name the first page |
 
 ---
 
